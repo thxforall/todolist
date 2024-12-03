@@ -28,16 +28,65 @@
 }
 
 #todo-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 10px;
   background-color: #f9f9f9;
   margin-bottom: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  /* flex 삭제 버튼 한개 있을 때
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   */
+  /* grid 수정 버튼 추가 */
+  display: grid;
+  grid-template-columns: 2fr 0.2fr auto;
+  align-items: center;
 }
 
 #todo-list li:hover {
   background-color: #f1f1f1;
+}
+
+/* list button 재사용성 고려 */
+#todo-list li button {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  margin-left: 3px;
+  cursor: pointer;
+  color: white;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+}
+
+/* hover 추가 */
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.edit-button {
+  background-color: #f1c40f;
+}
+
+.edit-button:hover {
+  background-color: #d4ac0d;
+}
+
+.submit-button {
+  background-color: #2ecc71;
+}
+
+.submit-button:hover {
+  background-color: #27ae60;
+}
+
+/* list input */
+#todo-list input {
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
